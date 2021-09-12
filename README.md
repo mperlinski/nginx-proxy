@@ -24,4 +24,16 @@ COMPOSE_PROJECT_NAME=projectname<br>
 4. Then run command which create nginx container with .env file configuration and share volume between host and container.<br>
 ```docker run -d -p 8080:80 --name nginx --env-file .env -v /etc/nginx/conf.d:/etc/nginx/conf.d -v /etc/nginx/sites-available:/etc/nginx/vhost.d nginx```
 
+## Docker-compose
+
+Create and start docker-compose<br>
+
+```docker-compose up -d```<br>
+
+Stop and delete volumes<br>
+
+```docker-compose down --volumes```
+
+
+
 
