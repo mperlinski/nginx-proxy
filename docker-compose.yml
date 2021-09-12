@@ -1,0 +1,16 @@
+version: "2"
+services:
+  nginx-proxy:
+    restart: always
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  nginx:
+    image: nginx:latest
+    expose: 
+      - "80"
+    volumes:
+      - ./www:/usr/share/nginx/html
+
